@@ -6,8 +6,7 @@
 namespace gpio::types
 {
 	GpioMode::GpioMode( uint8_t mode )
-			:
-			mMode( mode )
+			: mMode( mode )
 	{
 	}
 

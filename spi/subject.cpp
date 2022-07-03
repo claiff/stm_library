@@ -28,12 +28,12 @@ namespace uart
 		InitUART();
 		mInstance = this;
 	}
-    ${
-	extern "C" void $name_IRQHandler()
+
+	extern "C" void USART1_IRQHandler()
 	{
-		$name->SR &= ~USART_SR_RXNE;
+		USART1->SR &= ~USART_SR_RXNE;
 	}
-    $}
+
 	//
 	//Private methods
 	//
@@ -41,16 +41,16 @@ namespace uart
 	void Subject::InitUART()
 	{
 		rcc::SimpleRCC rcc;
+        ${
+            InitPins( $uart, &rcc );
 
-        InitPins( $name, &rcc );
-
-        rcc.SetUart( $name );
-        $name->CR1 |= USART_CR1_RXNEIE;
-        $name->CR1 |= USART_CR1_RE;
-        $name->CR1 |= USART_CR1_UE;
-        $name->BRR = GetBRR( $baud );
-        NVIC_EnableIRQ( $name_IRQn );
-
+            rcc.SetUart( $uart );
+            USART1->CR1 |= USART_CR1_RXNEIE;
+            USART1->CR1 |= USART_CR1_RE;
+            USART1->CR1 |= USART_CR1_UE;
+            USART1->BRR = GetBRR( $baud );
+            NVIC_EnableIRQ( USART1_IRQn );
+        $}
 	}
 
 	void Subject::InitPins( types::IRCC_Ptr rcc )
