@@ -3,7 +3,6 @@
 //
 #pragma once
 
-#include "gpio/types/gpio_afr.hpp"
 #include "gpio/types/gpio_mode.hpp"
 
 namespace gpio::mode

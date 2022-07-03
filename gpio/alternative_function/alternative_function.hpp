@@ -14,7 +14,7 @@ namespace gpio::alternative_func
 	explicit AlternativeFunction( uint8_t function );
 	~AlternativeFunction() override = default;
 
-	void SetFunction( GPIO_TypeDef *gpio, uint16_t pin ) noexcept;
+	void SetFunction( GPIO_TypeDef *gpio, uint16_t pin );
 
   private:
 	uint8_t mFunction;
