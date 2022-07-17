@@ -21,4 +21,7 @@ file( GLOB_RECURSE SOURCES
 include_directories( ${UART_DIR} )
 
 add_library( ${PROJECT_NAME} ${SOURCES}  )
-#target_link_libraries( ${PROJECT_NAME} CMSIS::STM32::F407VG STM32::NoSys )
+
+if( NOT RUN_TEST )
+    target_link_libraries( ${PROJECT_NAME} CMSIS::STM32::F407VG STM32::NoSys )
+endif()
