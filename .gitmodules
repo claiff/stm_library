@@ -1,0 +1,6 @@
+[submodule "stm32-cmake"]
+	path = stm32-cmake
+	url = git@github.com:ObKo/stm32-cmake.git
+[submodule "tests/lib/googletest"]
+	path = tests/lib/googletest
+	url = git@github.com:google/googletest.git
