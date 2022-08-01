@@ -6,8 +6,9 @@
 
 #include "misc/stm32f407xx.h"
 
-namespace types
+namespace periphery::types
 {
+	//TODO enum class
 	static const int FUNC_BITS_SYS = 0x00;
 	static const int FUNC_BITS_I2C = 0x04;
 	static const int FUNC_BITS_UART = 0x07;
@@ -18,7 +19,7 @@ namespace types
 	{
 	public:
 		virtual ~PeripheryInit() = default;
-		virtual void InitPeriphery() const noexcept = 0;
+		virtual void InitPeriphery() const = 0;
 	};
 
 	using PeripheryInitPtr = PeripheryInit*;

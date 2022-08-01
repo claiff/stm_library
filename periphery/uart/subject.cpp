@@ -4,7 +4,7 @@
 #include "subject.hpp"
 #include "pins.hpp"
 
-namespace uart
+namespace periphery::uart
 {
 #define UART_DIV_SAMPLING16( _PCLK_, _BAUD_ )            ((uint32_t)((((uint64_t)(_PCLK_))*25U)/(4U*((uint64_t)(_BAUD_)))))
 #define UART_DIVMANT_SAMPLING16( _PCLK_, _BAUD_ )        (UART_DIV_SAMPLING16((_PCLK_), (_BAUD_))/100U)
@@ -19,7 +19,7 @@ namespace uart
 	Subject* Subject::mInstance = nullptr;
 
 	Subject::Subject( USART_TypeDef* uart, types::IRCC_Ptr const& rcc,
-						  std::vector < utils::IObserverPtr > const& registrator )
+					  std::vector < utils::IObserverPtr > const& registrator )
 			:
 			mUart( uart )
 			, mRcc( rcc )
@@ -32,16 +32,16 @@ namespace uart
 
 	extern "C"
 	{
-		void USART1_IRQHandler()
+	void USART1_IRQHandler()
+	{
+		auto& registrator = Subject::mInstance->mRegistrator;
+		auto data = USART1->DR;
+		USART1->SR &= ~USART_SR_RXNE;
+		for( auto& observer: registrator )
 		{
-			auto& registrator = Subject::mInstance->mRegistrator;
-			auto data = USART1->DR;
-			USART1->SR &= ~USART_SR_RXNE;
-			for( auto& observer: registrator )
-			{
-				observer->AddData( data );
-			}
+			observer->AddData( data );
 		}
+	}
 	}
 
 	//

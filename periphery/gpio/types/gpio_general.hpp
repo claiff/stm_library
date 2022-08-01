@@ -9,8 +9,7 @@ namespace gpio::types
 {
 	const static uint8_t COUNT_PINS = 16;
 
-	enum class GPIO_PIN
-			: uint16_t
+	enum GPIO_PIN
 	{
 		PIN0 = 1 << 0,
 		PIN1 = 1 << 1,

@@ -4,7 +4,7 @@
 
 #include "simple_rcc.hpp"
 
-namespace rcc
+namespace periphery::rcc
 {
 	static int const DEFAULT_CLOCK = 168;
 

@@ -12,7 +12,7 @@ set(SOURCES
         ${DEBUG_DIR}/sender.hpp
         ${DEBUG_DIR}/uart.cpp
         ${DEBUG_DIR}/uart.hpp
-        )
+        light/bh1721.cpp light/bh1721.hpp)
 include_directories(.)
 add_library( ${PROJECT_NAME} ${SOURCES} )
 

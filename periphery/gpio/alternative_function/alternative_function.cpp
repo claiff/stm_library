@@ -15,6 +15,7 @@ namespace gpio::alternative_func
 	void AlternativeFunction::SetFunction( GPIO_TypeDef* gpio, uint16_t pin )
 	{
 		static constexpr uint8_t AFR_BITS = 4;
+
 		uint32_t read_data = gpio->AFR[0];
 
 		for( auto i = 0; i < gpio::types::COUNT_PINS / 2 - 1; ++i )

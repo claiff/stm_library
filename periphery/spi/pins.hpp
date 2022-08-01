@@ -8,7 +8,7 @@
 #include "types/ircc.hpp"
 #include "gpio/types/periphery_init.hpp"
 
-namespace uart
+namespace periphery::spi
 {
   class Pins : public gpio::types::PeripheryInit
   {

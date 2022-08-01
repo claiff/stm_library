@@ -6,7 +6,7 @@
 
 #include <cstdint>
 
-namespace types
+namespace periphery::types
 {
 	class IUArt
 	{

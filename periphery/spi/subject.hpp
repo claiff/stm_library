@@ -7,7 +7,7 @@
 #include "misc/stm32f407xx.h"
 #include "types/ircc.hpp"
 
-namespace uart
+namespace periphery::spi
 {
 	class Subject final
 	{

@@ -11,7 +11,7 @@
 #include "types/periphery_init.hpp"
 #include "utils/observer.hpp"
 
-namespace uart
+namespace periphery::uart
 {
 	class Subject final
 	{

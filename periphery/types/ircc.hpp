@@ -8,7 +8,7 @@
 
 #include "misc/stm32f407xx.h"
 
-namespace types
+namespace periphery::types
 {
 	class IRCC
 	{

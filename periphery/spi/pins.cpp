@@ -9,7 +9,7 @@
 #include "gpio/pull/pull_up.hpp"
 #include "gpio/pull/no_pull.hpp"
 
-namespace uart
+namespace periphery::spi
 {
 	Pins::Pins( types::IRCC_Ptr const& rcc )
 			: mRcc( rcc )

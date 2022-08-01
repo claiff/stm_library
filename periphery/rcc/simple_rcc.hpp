@@ -6,7 +6,7 @@
 
 #include "types/ircc.hpp"
 
-namespace rcc
+namespace periphery::rcc
 {
 	class SimpleRCC
 			: public types::IRCC
