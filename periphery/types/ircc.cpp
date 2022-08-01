@@ -4,7 +4,7 @@
 
 #include "ircc.hpp"
 
-namespace types
+namespace periphery::types
 {
 	void IRCC::SetGpioAClock() const noexcept
 	{

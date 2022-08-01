@@ -6,7 +6,7 @@
 #include "rcc/simple_rcc.hpp"
 
 
-namespace uart
+namespace periphery::spi
 {
 
 	//TODO !!!!Разобраться с этим!!!!

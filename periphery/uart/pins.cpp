@@ -9,7 +9,7 @@
 #include "gpio/pull/pull_up.hpp"
 #include "gpio/pull/no_pull.hpp"
 
-namespace uart
+namespace periphery::uart
 {
 
 	UART1_ISR::UART1_ISR( types::IRCC_Ptr const& rcc )

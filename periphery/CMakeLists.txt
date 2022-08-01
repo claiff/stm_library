@@ -5,6 +5,7 @@ set( CMAKE_CXX_STANDARD 17 )
 set( CMAKE_C_STANDARD 11 )
 
 set( UART_DIR uart )
+set( I2C_DIR i2c )
 set( RCC_DIR rcc )
 set( GPIO_DIR gpio )
 set( UTILS_DIR utils )
@@ -16,6 +17,7 @@ file( GLOB_RECURSE SOURCES
     "${TYPES_DIR}/*.*"
     "${GPIO_DIR}/*.*"
     "${RCC_DIR}/*.*"
+    "${I2C_DIR}/*.*"
     )
 
 include_directories( ${UART_DIR} )
