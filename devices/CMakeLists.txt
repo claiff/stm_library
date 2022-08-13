@@ -12,8 +12,17 @@ set(SOURCES
         ${DEBUG_DIR}/sender.hpp
         ${DEBUG_DIR}/uart.cpp
         ${DEBUG_DIR}/uart.hpp
+
         light/bh/bh1721.cpp
         light/bh/bh1721.hpp
+        light/bh/mode/auto.cpp
+        light/bh/mode/auto.hpp
+        light/bh/types/imode.hpp
+        light/bh/mode/low.cpp
+        light/bh/mode/low.hpp
+        light/bh/mode/high.cpp
+        light/bh/mode/high.hpp
+
         pressure/bmp/bmp_280.hpp
         pressure/bmp/compensation/compensator.hpp
         pressure/bmp/settings/weather.cpp
@@ -27,7 +36,42 @@ set(SOURCES
         pressure/bmp/settings/gaming.hpp
         pressure/bmp/compensation/dig_holder.cpp
         pressure/bmp/compensation/dig_holder.hpp
-        pressure/bmp/compensation/compensator.cpp pressure/bmp/bmp_280.cpp light/bh/mode/auto.cpp light/bh/mode/auto.hpp light/bh/types/imode.hpp light/bh/mode/low.cpp light/bh/mode/low.hpp light/bh/mode/high.cpp light/bh/mode/high.hpp)
+        pressure/bmp/compensation/compensator.cpp
+        pressure/bmp/bmp_280.cpp
+
+        compass/gy/gy_271.cpp
+        compass/gy/gy_271.hpp
+        compass/gy/types/imode.hpp
+        compass/gy/configurator.cpp
+        compass/gy/configurator.hpp
+        compass/gy/types/iodr.hpp
+        compass/gy/types/irng.hpp
+        compass/gy/types/iosr.hpp
+        compass/gy/mode/stand_by.cpp
+        compass/gy/mode/stand_by.hpp
+        compass/gy/mode/continuous.cpp
+        compass/gy/mode/continuous.hpp
+        compass/gy/odr/odr_10.cpp
+        compass/gy/odr/odr_10.hpp
+        compass/gy/odr/odr_50.cpp
+        compass/gy/odr/odr_50.hpp
+        compass/gy/odr/odr_100.cpp
+        compass/gy/odr/odr_100.hpp
+        compass/gy/odr/odr_200.cpp
+        compass/gy/odr/odr_200.hpp
+        compass/gy/rng/rng_2.cpp
+        compass/gy/rng/rng_2.hpp
+        compass/gy/rng/rng_8.cpp
+        compass/gy/rng/rng_8.hpp
+        compass/gy/osr/osr_512.cpp
+        compass/gy/osr/osr_512.hpp
+        compass/gy/osr/osr_256.cpp
+        compass/gy/osr/osr_256.hpp
+        compass/gy/osr/osr_128.cpp
+        compass/gy/osr/osr_128.hpp
+        compass/gy/osr/osr_64.cpp
+        compass/gy/osr/osr_64.hpp
+        )
 include_directories(.)
 add_library( ${PROJECT_NAME} ${SOURCES} )
 
