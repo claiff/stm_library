@@ -4,7 +4,7 @@
 
 #include "gtest/gtest.h"
 #include "types/i2c.hpp"
-#include "light/bh1721.hpp"
+#include "light/bh/bh1721.hpp"
 
 class MockBhI2c : public periphery::types::I2C
 {

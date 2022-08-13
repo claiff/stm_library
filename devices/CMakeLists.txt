@@ -12,8 +12,8 @@ set(SOURCES
         ${DEBUG_DIR}/sender.hpp
         ${DEBUG_DIR}/uart.cpp
         ${DEBUG_DIR}/uart.hpp
-        light/bh1721.cpp
-        light/bh1721.hpp
+        light/bh/bh1721.cpp
+        light/bh/bh1721.hpp
         pressure/bmp/bmp_280.hpp
         pressure/bmp/compensation/compensator.hpp
         pressure/bmp/settings/weather.cpp
@@ -27,7 +27,7 @@ set(SOURCES
         pressure/bmp/settings/gaming.hpp
         pressure/bmp/compensation/dig_holder.cpp
         pressure/bmp/compensation/dig_holder.hpp
-        pressure/bmp/compensation/compensator.cpp pressure/bmp/bmp_280.cpp)
+        pressure/bmp/compensation/compensator.cpp pressure/bmp/bmp_280.cpp light/bh/mode/auto.cpp light/bh/mode/auto.hpp light/bh/types/imode.hpp light/bh/mode/low.cpp light/bh/mode/low.hpp light/bh/mode/high.cpp light/bh/mode/high.hpp)
 include_directories(.)
 add_library( ${PROJECT_NAME} ${SOURCES} )
 

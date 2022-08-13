@@ -5,36 +5,26 @@
 #pragma once
 
 #include "types/i2c.hpp"
+#include "types/imode.hpp"
 
-namespace devices::light
+namespace devices::light::bh
 {
-	enum class PowerState
-	{
-		On,
-		Off
-	};
-	enum class ResolutionMode
-	{
-		High,
-		Low,
-		Auto
-	};
-
 	class BH1721
 	{
 	public:
-		explicit BH1721( periphery::types::I2CPtr const& i2c );
+		BH1721( periphery::types::I2CPtr const& i2c, types::IModePtr const& mode );
 		~BH1721() = default;
 
 		[[nodiscard]] uint16_t Get() const;
 	private:
-		void SetPower( PowerState state ) const;
+		void ResetPower() const;
 		void ChangeSensitivity( float sensitivity );
-		void SetMode( ResolutionMode mode ) const;
+		void SetMode() const;
 		[[nodiscard]] uint16_t ReadData() const;
 
 		periphery::types::I2CPtr mI2c;
 		float mSensitivity;
+		types::IModePtr mMode;
 	};
 }
 
