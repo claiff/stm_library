@@ -18,7 +18,7 @@ namespace gpio::alternative_func
 
 		uint32_t read_data = gpio->AFR[0];
 
-		for( auto i = 0; i < gpio::types::COUNT_PINS / 2 - 1; ++i )
+		for( auto i = 0; i < gpio::types::COUNT_PINS / 2 ; ++i )
 		{
 			if( IsActivePin( pin, i ))
 			{
