@@ -23,7 +23,6 @@ add_executable( ${PROJECT_NAME}  ${SOURCES} )
 
 include_directories( periphery )
 include_directories( devices )
-#include_directories( . )
 
 add_subdirectory( devices )
 add_subdirectory( periphery )
