@@ -71,7 +71,29 @@ set(SOURCES
         compass/gy/osr/osr_128.hpp
         compass/gy/osr/osr_64.cpp
         compass/gy/osr/osr_64.hpp
-        )
+
+        accel/mpu/mpu_6050.cpp
+        accel/mpu/mpu_6050.hpp
+        accel/mpu/configurator.cpp
+        accel/mpu/configurator.hpp
+
+        accel/mpu/types/iconfig.hpp
+        accel/mpu/config/fifo/enable/first.cpp
+        accel/mpu/config/fifo/enable/first.hpp
+        accel/mpu/config/fifo/control/first.cpp
+        accel/mpu/config/fifo/control/first.hpp
+        accel/mpu/config/fifo/configurator.cpp
+        accel/mpu/config/fifo/configurator.hpp
+        accel/mpu/config/devices/configurator.cpp
+        accel/mpu/config/devices/configurator.hpp
+        accel/mpu/config/devices/general/first.cpp
+        accel/mpu/config/devices/general/first.hpp
+        accel/mpu/config/devices/gyro/first.cpp
+        accel/mpu/config/devices/gyro/first.hpp
+        accel/mpu/config/power/general_reset/first.cpp
+        accel/mpu/config/power/general_reset/first.hpp
+        accel/mpu/config/power/device_reset/first.cpp
+        accel/mpu/config/power/device_reset/first.hpp accel/mpu/config/power/configurator.cpp accel/mpu/config/power/configurator.hpp accel/mpu/config/devices/accel/first.cpp accel/mpu/config/devices/accel/first.hpp accel/mpu/builder/first.cpp accel/mpu/builder/first.hpp)
 include_directories(.)
 add_library( ${PROJECT_NAME} ${SOURCES} )
 
